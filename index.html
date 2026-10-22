@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FOKUS – foreningen for oplevelser, kultur, unge og samvær</title>
+<meta name="description" content="FOKUS er en ungedrevet forening, der giver unge adgang til kultur til en markant reduceret pris. Medlemskab er gratis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#183a5c;--sky:#a9bccb;--mist:#e8eef3;--ink:#10263d;--white:#fff;--max:1080px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Outfit,system-ui,sans-serif;font-weight:300;font-size:1.08rem;line-height:1.6;color:var(--ink);background:var(--white)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-weight:800;line-height:1.05;margin:0;color:var(--navy)}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:1.5rem}
+h3{font-size:1.25rem;font-weight:600}
+section{padding:4.5rem 0}
+p{max-width:62ch;margin:0 0 1em}
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--mist)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:.5rem;padding-bottom:.5rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;font-size:1.5rem;letter-spacing:.04em;color:var(--navy)}
+.brand img{height:34px;width:auto;display:block}
+nav{display:flex;gap:1.1rem;flex-wrap:wrap;font-size:.95rem;font-weight:400}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline}
+.btn{display:inline-block;background:var(--navy);color:var(--white);border:2px solid var(--navy);border-radius:999px;padding:.7rem 1.6rem;font:600 1rem Outfit,sans-serif;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--white);color:var(--navy)}
+.btn.alt{background:transparent;color:var(--navy)}.btn.alt:hover{background:var(--navy);color:var(--white)}
+.hero{background:var(--sky);overflow:hidden;padding:0}
+.hero .wrap{display:grid;grid-template-columns:1.3fr 1fr;align-items:center;min-height:78vh;gap:1rem}
+.hero h1{font-size:clamp(3rem,9vw,6.5rem);letter-spacing:-.02em;margin-bottom:1.2rem}
+.hero p{font-size:1.25rem;color:var(--ink)}
+.hero .logo{width:100%;max-width:420px;justify-self:center;mix-blend-mode:multiply;animation:drift 1.4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes drift{from{opacity:0;transform:rotate(-12deg) scale(.88)}to{opacity:1;transform:none}}
+.stats{display:flex;gap:2.5rem;margin-top:2rem;flex-wrap:wrap}
+.stats b{display:block;font-size:2.6rem;font-weight:800;color:var(--navy);line-height:1}
+.stats span{font-size:.95rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.partners{display:flex;flex-wrap:wrap;gap:.5rem;padding:0;list-style:none;margin:1rem 0 0}
+.partners li{border:1.5px solid var(--navy);border-radius:999px;padding:.25rem .9rem;font-size:.95rem;font-weight:400;color:var(--navy)}
+.tint{background:var(--mist)}
+.events{list-style:none;margin:0;padding:0}
+.event{display:grid;grid-template-columns:90px 1fr auto;gap:1.5rem;align-items:center;padding:1.3rem 0;border-top:2px solid var(--navy)}
+.event:last-child{border-bottom:2px solid var(--navy)}
+.date{text-align:center;color:var(--navy);font-weight:800;line-height:1}
+.date big{display:block;font-size:2.8rem}.date small{font-size:1rem;font-weight:600;text-transform:lowercase}
+.event p{margin:0;font-size:.98rem}
+.board{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.person .ph{aspect-ratio:1;background:var(--sky);border-radius:48% 52% 45% 55%/55% 45% 55% 45%;margin-bottom:.8rem;overflow:hidden;display:grid;place-items:center;color:var(--navy);font-weight:800;font-size:2.5rem}
+.person .ph img{width:100%;height:100%;object-fit:cover}
+.person p{margin:0;font-size:.95rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.8rem}
+.gallery figure{margin:0;aspect-ratio:4/5;background:var(--sky);border-radius:20px 80px 20px 80px;overflow:hidden;position:relative}
+.gallery figure:nth-child(even){border-radius:80px 20px 80px 20px;background:var(--navy)}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery figcaption{position:absolute;left:1rem;bottom:.8rem;font-size:.85rem;color:var(--white);font-weight:400}
+.forms{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+form{display:grid;gap:.9rem}
+label{font-weight:400;font-size:.95rem;display:grid;gap:.3rem}
+input,textarea{font:inherit;padding:.75rem 1rem;border:2px solid var(--navy);border-radius:14px;background:var(--white);color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+.check{display:flex;gap:.6rem;align-items:flex-start;font-size:.9rem}.check input{margin-top:.3rem;accent-color:var(--navy)}
+.row{display:grid;grid-template-columns:1fr 1.4fr;gap:.9rem}.soon{font-size:.9rem;font-weight:400;color:var(--navy)}
+.hp{position:absolute;left:-9999px}
+.msg{font-weight:600;min-height:1.5em;margin:0}.msg.err{color:#9b1c1c}
+.signup{background:var(--navy);color:var(--white);border-radius:36px 120px 36px 36px;padding:2.2rem}
+.signup h2,.signup label{color:var(--white)}.signup .btn{background:var(--white);color:var(--navy);border-color:var(--white)}
+.signup .btn:hover{background:transparent;color:var(--white)}.signup input{border-color:var(--white)}.signup .msg.err{color:#ffd0d0}
+details{border-top:2px solid var(--navy);padding:1rem 0}summary{cursor:pointer;font-weight:600;font-size:1.2rem;color:var(--navy)}
+details p,details li{font-size:.98rem}
+footer{background:var(--navy);color:var(--white);padding:3rem 0;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between}
+footer a{margin-right:1.1rem}
+@media(max-width:800px){.hero .wrap,.about,.forms{grid-template-columns:1fr}.hero .logo{max-width:220px;grid-row:1;margin-top:1.5rem}.hero .wrap{min-height:0;padding-bottom:2.5rem}.event{grid-template-columns:70px 1fr}.event .btn{grid-column:1/-1;justify-self:start}nav{display:none}section{padding:3rem 0}}
+@media(prefers-reduced-motion:reduce){.hero .logo{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="brand" href="#top"><img src="FOKUS_logo_tekst.png" alt="FOKUS"></a>
+ <nav aria-label="Hovedmenu"><a href="#om">Om FOKUS</a><a href="#kalender">Kalender</a><a href="#bestyrelse">Bestyrelse</a><a href="#galleri">Galleri</a><a href="#kontakt">Kontakt</a></nav>
+ <a class="btn" href="#tilmeld">Bliv medlem</a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+ <div>
+  <h1>Kultur for alle unge</h1>
+  <p>Et gratis medlemskab giver dig adgang til udvalgte arrangementer hos Danmarks kulturinstitutioner til en markant reduceret pris. Hver måned. Sammen med andre unge.</p>
+  <p><a class="btn" href="#tilmeld">Bliv gratis medlem</a> <a class="btn alt" href="#kalender">Se kommende events</a></p>
+  <div class="stats"><div><b id="memberCount">200+</b><span>medlemmer</span></div><div><b>1</b><span>event om måneden</span></div><div><b>0 kr.</b><span>for at være med</span></div></div>
+ </div>
+ <img class="logo" src="FOKUS_LOGO.jpg" alt="FOKUS-logo">
+</div></section>
+
+<section id="om"><div class="wrap about">
+ <div>
+  <h2>Om FOKUS</h2>
+  <p>FOKUS er en ungedrevet, frivillig forening, der giver unge den anledning, de ofte mangler for at opsøge kulturlivet. Mange unge finder det svært eller dyrt at gå til kultur uden en konkret anledning.</p>
+  <p>Som medlem inviteres du hver måned til et udvalgt arrangement hos en etableret kulturinstitution. Vi vælger bevidst kun ét ad gangen, så kvaliteten er høj, og der opstår hype. I samarbejde med institutionerne arrangerer vi også oplæg, talks og møder med kunstnere før eller efter, så der bliver plads til fællesskab og nye samtaler.</p>
+ </div>
+ <div>
+  <p>FOKUS er startet og drives af fire unge mellem 19 og 22 år, der mødte hinanden på Grundtvigs Højskole. Vi tror på, at et stærkt demokrati kræver, at alle unge har reel adgang til de fællesskaber, der former os som samfund. FOKUS drives uden kommercielt sigte.</p>
+  <h3>Vi samarbejder med</h3>
+  <ul class="partners"><li>Østre Gasværk</li><li>Dansehallerne</li><li>Cinemateket</li><li>Aveny-T</li><li>DR Koncerthus</li><li>Urban13</li><li>Folketeatret</li></ul>
+  <p style="margin-top:1rem"><a href="#" id="vedtaegter">Læs vores vedtægter</a></p>
+ </div>
+</div></section>
+
+<section id="kalender" class="tint"><div class="wrap">
+ <h2>Kommende events</h2>
+ <ul class="events" id="eventList"></ul>
+ <p id="noEvents" hidden>Der er ingen planlagte events lige nu. Bliv medlem, så får du besked, når næste er klar.</p>
+</div></section>
+
+<section id="bestyrelse"><div class="wrap">
+ <h2>Bestyrelsen</h2>
+ <div class="board" id="boardList"></div>
+</div></section>
+
+<section id="galleri" class="tint"><div class="wrap">
+ <h2>Tidligere events</h2>
+ <div class="gallery" id="galleryList"></div>
+</div></section>
+
+<section id="tilmeld"><div class="wrap forms">
+ <div class="signup">
+  <h2>Bliv medlem</h2>
+  <p>Det er gratis og åbent for unge fra 18 til og med 27 år. Du får en invitation til månedens event og besked om nye samarbejder.</p>
+  <form id="signupForm" novalidate>
+   <label>Navn<input name="navn" required autocomplete="name"></label>
+   <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+   <label>Telefonnummer<input name="telefon" type="tel" required pattern="[0-9 +]{8,15}" autocomplete="tel"></label>
+   <label>Fødselsår<input name="foedselsaar" required inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="bday-year"></label>
+   <div class="row"><label>Postnummer<input name="postnummer" required inputmode="numeric" pattern="[0-9]{4}" maxlength="4" autocomplete="postal-code"></label>
+   <label>Kommune<input name="kommune" required></label></div>
+   <label class="check"><input type="checkbox" name="samtykke" required><span>Jeg giver samtykke til, at FOKUS gemmer mine oplysninger for at administrere mit medlemskab og invitere mig til events. Læs <a href="#datapolitik" data-open>datapolitikken</a>.</span></label>
+   <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <button class="btn" type="submit">Meld mig ind</button>
+   <p class="msg" role="status"></p>
+  </form>
+ </div>
+ <div id="kontakt">
+  <h2>Kontakt</h2>
+  <p>Har du et spørgsmål, eller vil I samarbejde med os? Skriv til os, eller send en mail til <a href="mailto:forening.fokus@gmail.com">forening.fokus@gmail.com</a>.</p>
+  <form id="contactForm" novalidate>
+   <label>Navn<input name="navn" required></label>
+   <label>E-mail<input name="email" type="email" required></label>
+   <label>Besked<textarea name="besked" required></textarea></label>
+   <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+   <button class="btn" type="submit">Send besked</button>
+   <p class="msg" role="status"></p>
+  </form>
+ </div>
+</div></section>
+
+<section id="datapolitik" class="tint"><div class="wrap">
+ <details id="dp"><summary>Datapolitik</summary>
+  <p><b>Hvem er ansvarlig?</b> FOKUS er dataansvarlig for de oplysninger, vi behandler. Kontakt: forening.fokus@gmail.com.</p>
+  <p><b>Hvilke oplysninger?</b> Kun det, der er nødvendigt for foreningens drift: navn, e-mail, telefonnummer, fødselsår, postnummer og kommune. Skriver du til os, gemmer vi også din besked. Vi beder ikke om følsomme oplysninger. Hvis et event kræver det (fx allergier), sker det kun med dit samtykke.</p>
+  <p><b>Hvorfor?</b> Administration af medlemskab, planlægning og afvikling af events, kommunikation med medlemmer og overholdelse af lovkrav.</p>
+  <p><b>Retligt grundlag.</b> Opfyldelse af medlemskabet (GDPR art. 6, stk. 1, litra b), foreningens legitime interesse i at administrere medlemsforhold (litra f) og retlige forpligtelser, fx bogføringsloven (litra c). Følsomme oplysninger behandles kun med samtykke (art. 9, stk. 2, litra a).</p>
+  <p><b>Opbevaring.</b> Vi opbevarer dine oplysninger, så længe du er medlem. Ved udmeldelse slettes de inden for 12 måneder, medmindre loven kræver længere opbevaring (fx 5 år for regnskabsmateriale).</p>
+  <p><b>Videregivelse.</b> Kun når det er nødvendigt: til regnskabsfører eller bogholder, til offentlige myndigheder hvis loven kræver det, og til samarbejdspartnere (fx forsikringsselskaber) med kun de relevante oplysninger. Vi sælger aldrig dine oplysninger.</p>
+  <p><b>Dine rettigheder.</b> Du har ret til indsigt, rettelse eller sletning, begrænsning af behandling og til at gøre indsigelse. Du kan til enhver tid trække dit samtykke tilbage, hvis behandlingen bygger på samtykke.</p>
+  <p><b>Klage.</b> Er du uenig i vores behandling af dine oplysninger, kan du klage til <a href="https://www.datatilsynet.dk" target="_blank" rel="noopener">Datatilsynet</a>.</p>
+ </details>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div><img src="FOKUS_logo_tekst.png" alt="FOKUS" style="height:46px;width:auto;filter:brightness(0) invert(1);display:block;margin-bottom:.6rem"><br>foreningen for oplevelser, kultur, unge og samvær<br><a href="mailto:forening.fokus@gmail.com">forening.fokus@gmail.com</a></div>
+ <div id="social"></div>
+ <div><a href="#" id="vedtaegter2">Vedtægter</a><a href="#datapolitik" data-open>Datapolitik</a></div>
+</div></footer>
+
+<script src="indhold.js"></script>
+<script>
+const C = window.CONFIG || {};
+const $ = s => document.querySelector(s);
+const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function parseDato(s){
+  s = String(s).trim();
+  let m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/); if (m) return new Date(+m[1], m[2]-1, +m[3]);
+  m = s.match(/^(\d{1,2})[\/.\-](\d{1,2})[\/.\-](\d{4})$/); if (m) return new Date(+m[3], m[2]-1, +m[1]);
+  return null;
+}
+$('#memberCount').textContent = C.medlemmer || '';
+['#vedtaegter','#vedtaegter2'].forEach(s => { $(s).href = C.vedtaegter || '#'; });
+$('#social').innerHTML = (C.sociale||[]).map(s => `<a href="${esc(s.url)}" rel="noopener" target="_blank">${esc(s.navn)}</a>`).join('');
+
+const start = new Date(); start.setHours(0,0,0,0);
+const upcoming = (C.events||[]).map(e => ({...e, d: parseDato(e.dato)})).filter(e => e.d && e.d >= start).sort((a,b) => a.d - b.d);
+$('#noEvents').hidden = upcoming.length > 0;
+$('#eventList').innerHTML = upcoming.map(e => {
+  const mnd = e.d.toLocaleDateString('da-DK', {month:'short'}).replace('.','');
+  const meta = esc(e.sted) + (e.tid ? ' · kl. ' + esc(e.tid) : '');
+  const knap = e.link ? `<a class="btn" href="${esc(e.link)}" target="_blank" rel="noopener">Køb billet</a>` : `<span class="soon">Billetter kommer snart</span>`;
+  return `<li class="event"><div class="date"><big>${e.d.getDate()}</big><small>${mnd}</small></div><div><h3>${esc(e.titel)}</h3><p>${meta}</p>${e.tekst?`<p>${esc(e.tekst)}</p>`:''}</div>${knap}</li>`;
+}).join('');
+
+$('#boardList').innerHTML = (C.bestyrelse||[]).map(p =>
+  `<div class="person"><div class="ph">${p.foto ? `<img src="${esc(p.foto)}" alt="${esc(p.navn)}">` : esc((p.navn||'?').charAt(0))}</div><h3>${esc(p.navn)}</h3><p>${esc(p.rolle)}</p></div>`).join('');
+
+const gal = C.galleri || [];
+$('#galleryList').innerHTML = gal.length
+  ? gal.map(g => `<figure><img src="${esc(g.billede)}" alt="${esc(g.tekst||'')}" loading="lazy">${g.tekst?`<figcaption>${esc(g.tekst)}</figcaption>`:''}</figure>`).join('')
+  : [1,2,3,4].map(() => `<figure><figcaption>Billeder kommer snart</figcaption></figure>`).join('');
+
+document.querySelectorAll('[data-open]').forEach(a => a.addEventListener('click', () => { $('#dp').open = true; }));
+
+function handle(formId, type, okText) {
+  const form = $(formId), msg = form.querySelector('.msg'), btn = form.querySelector('button');
+  const fail = t => { msg.className = 'msg err'; msg.textContent = t; };
+  form.addEventListener('submit', async ev => {
+    ev.preventDefault();
+    msg.className = 'msg';
+    if (form.website.value) return;
+    if (!form.checkValidity()) { fail('Udfyld venligst alle felter korrekt.'); form.reportValidity(); return; }
+    if (form.foedselsaar) {
+      const y = new Date().getFullYear(), f = +form.foedselsaar.value;
+      if (f < y - 27 || f > y - 18) { fail('Medlemskab er for unge fra 18 til og med 27 år.'); return; }
+    }
+    if (!C.formularUrl) { fail('Formularen er endnu ikke forbundet. Skriv til forening.fokus@gmail.com.'); return; }
+    const data = new URLSearchParams(new FormData(form)); data.delete('website'); data.set('type', type);
+    btn.disabled = true; msg.textContent = 'Sender …';
+    try {
+      await fetch(C.formularUrl, { method: 'POST', mode: 'no-cors', body: data });
+      form.reset(); msg.textContent = okText;
+    } catch (e) { fail('Noget gik galt. Prøv igen, eller skriv til forening.fokus@gmail.com.'); }
+    btn.disabled = false;
+  });
+}
+handle('#signupForm', 'medlem', 'Velkommen i FOKUS! Du hører fra os snart.');
+handle('#contactForm', 'kontakt', 'Tak for din besked. Vi svarer hurtigst muligt.');
+</script>
+</body>
+</html>
