@@ -50,5 +50,5 @@ window.CONFIG = {
   ],
 
   /* --- Adresse til tilmelding og kontaktformular (Google Sheets, kommer til sidst) --- */
-  formularUrl: ""
+  formularUrl: "https://script.google.com/macros/s/AKfycbzNxjDQiXEoUd7Jby3Xf2l0hcCuZwreU_QnUec_LaVhyPZjT6ZwIvtQ_MxrKV75hBpY/exec"
 };
