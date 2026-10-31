@@ -17,7 +17,7 @@ window.CONFIG = {
   ],
 
   /* --- Adresse til medlemsregistret (fra Google Apps Script). Bruges af tilmelding og kontaktformular. --- */
-  formularUrl: "",
+  formularUrl: "https://script.google.com/macros/s/AKfycbx9FG1w64GqN_hLGLuSF2SKFsake24ALmgPbyzlVlx0yqnDlt1-ZORZNyrGksSdVQwBUA/exec",
 
   /* --- TEKSTER PÅ SIDEN --- */
   tekster: {
