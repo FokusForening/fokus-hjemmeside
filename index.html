@@ -44,7 +44,7 @@ nav a{text-decoration:none}nav a:hover{text-decoration:underline}
 .partners li{border:1.5px solid var(--navy);border-radius:999px;padding:.25rem .9rem;font-size:.95rem;font-weight:400;color:var(--navy)}
 .tint{background:var(--mist)}
 .events{list-style:none;margin:0;padding:0}
-.event{display:grid;grid-template-columns:90px 1fr auto;gap:1.5rem;align-items:center;padding:1.3rem 0;border-top:2px solid var(--navy)}
+.event{display:grid;grid-template-columns:90px 1fr;gap:1.5rem;align-items:center;padding:1.3rem 0;border-top:2px solid var(--navy)}
 .event:last-child{border-bottom:2px solid var(--navy)}
 .date{text-align:center;color:var(--navy);font-weight:800;line-height:1}
 .date big{display:block;font-size:2.8rem}.date small{font-size:1rem;font-weight:600;text-transform:lowercase}
@@ -89,32 +89,25 @@ footer a{margin-right:1.1rem}
 <main id="top">
 <section class="hero"><div class="wrap">
  <div>
-  <h1>Kultur for alle unge</h1>
-  <p>Et gratis medlemskab giver dig adgang til udvalgte arrangementer hos Danmarks kulturinstitutioner til en markant reduceret pris. Hver måned. Sammen med andre unge.</p>
+  <h1 id="heroTitel"></h1>
+  <p id="heroTekst"></p>
   <p><a class="btn" href="#tilmeld">Bliv gratis medlem</a> <a class="btn alt" href="#kalender">Se kommende events</a></p>
-  <div class="stats"><div><b id="memberCount">200+</b><span>medlemmer</span></div><div><b>1</b><span>event om måneden</span></div><div><b>0 kr.</b><span>for at være med</span></div></div>
+  <div class="stats" id="stats"></div>
  </div>
  <img class="logo" src="FOKUS_LOGO.jpg" alt="FOKUS-logo">
 </div></section>
 
 <section id="om"><div class="wrap about">
- <div>
-  <h2>Om FOKUS</h2>
-  <p>FOKUS er en ungedrevet, frivillig forening, der giver unge den anledning, de ofte mangler for at opsøge kulturlivet. Mange unge finder det svært eller dyrt at gå til kultur uden en konkret anledning.</p>
-  <p>Som medlem inviteres du hver måned til et udvalgt arrangement hos en etableret kulturinstitution. Vi vælger bevidst kun ét ad gangen, så kvaliteten er høj, og der opstår hype. I samarbejde med institutionerne arrangerer vi også oplæg, talks og møder med kunstnere før eller efter, så der bliver plads til fællesskab og nye samtaler.</p>
- </div>
- <div>
-  <p>FOKUS er startet og drives af fire unge mellem 19 og 22 år, der mødte hinanden på Grundtvigs Højskole. Vi tror på, at et stærkt demokrati kræver, at alle unge har reel adgang til de fællesskaber, der former os som samfund. FOKUS drives uden kommercielt sigte.</p>
-  <h3>Vi samarbejder med</h3>
-  <ul class="partners"><li>Østre Gasværk</li><li>Dansehallerne</li><li>Cinemateket</li><li>Aveny-T</li><li>DR Koncerthus</li><li>Urban13</li><li>Folketeatret</li></ul>
-  <p style="margin-top:1rem"><a href="#" id="vedtaegter">Læs vores vedtægter</a></p>
- </div>
+ <div><h2 id="omOverskrift"></h2><div id="omTekst"></div></div>
+ <div><h3 id="partnerOverskrift"></h3><ul class="partners" id="partnerListe"></ul><p style="margin-top:1rem"><a href="#" id="vedtaegter">Læs vores vedtægter</a></p></div>
 </div></section>
 
 <section id="kalender" class="tint"><div class="wrap">
- <h2>Kommende events</h2>
+ <h2 id="eventOverskrift"></h2>
  <ul class="events" id="eventList"></ul>
- <p id="noEvents" hidden>Der er ingen planlagte events lige nu. Bliv medlem, så får du besked, når næste er klar.</p>
+ <p id="eventNote" style="margin-top:1.2rem"></p>
+ <p><a class="btn" href="#tilmeld">Bliv gratis medlem</a></p>
+ <p id="noEvents" hidden></p>
 </div></section>
 
 <section id="bestyrelse"><div class="wrap">
@@ -146,7 +139,7 @@ footer a{margin-right:1.1rem}
  </div>
  <div id="kontakt">
   <h2>Kontakt</h2>
-  <p>Har du et spørgsmål, eller vil I samarbejde med os? Skriv til os, eller send en mail til <a href="mailto:forening.fokus@gmail.com">forening.fokus@gmail.com</a>.</p>
+  <p><span id="kontaktTekst"></span> <a class="mail" href="mailto:"></a>.</p>
   <form id="contactForm" novalidate>
    <label>Navn<input name="navn" required></label>
    <label>E-mail<input name="email" type="email" required></label>
@@ -159,21 +152,12 @@ footer a{margin-right:1.1rem}
 </div></section>
 
 <section id="datapolitik" class="tint"><div class="wrap">
- <details id="dp"><summary>Datapolitik</summary>
-  <p><b>Hvem er ansvarlig?</b> FOKUS er dataansvarlig for de oplysninger, vi behandler. Kontakt: forening.fokus@gmail.com.</p>
-  <p><b>Hvilke oplysninger?</b> Kun det, der er nødvendigt for foreningens drift: navn, e-mail, telefonnummer, fødselsår, postnummer og kommune. Skriver du til os, gemmer vi også din besked. Vi beder ikke om følsomme oplysninger. Hvis et event kræver det (fx allergier), sker det kun med dit samtykke.</p>
-  <p><b>Hvorfor?</b> Administration af medlemskab, planlægning og afvikling af events, kommunikation med medlemmer og overholdelse af lovkrav.</p>
-  <p><b>Retligt grundlag.</b> Opfyldelse af medlemskabet (GDPR art. 6, stk. 1, litra b), foreningens legitime interesse i at administrere medlemsforhold (litra f) og retlige forpligtelser, fx bogføringsloven (litra c). Følsomme oplysninger behandles kun med samtykke (art. 9, stk. 2, litra a).</p>
-  <p><b>Opbevaring.</b> Vi opbevarer dine oplysninger, så længe du er medlem. Ved udmeldelse slettes de inden for 12 måneder, medmindre loven kræver længere opbevaring (fx 5 år for regnskabsmateriale).</p>
-  <p><b>Videregivelse.</b> Kun når det er nødvendigt: til regnskabsfører eller bogholder, til offentlige myndigheder hvis loven kræver det, og til samarbejdspartnere (fx forsikringsselskaber) med kun de relevante oplysninger. Vi sælger aldrig dine oplysninger.</p>
-  <p><b>Dine rettigheder.</b> Du har ret til indsigt, rettelse eller sletning, begrænsning af behandling og til at gøre indsigelse. Du kan til enhver tid trække dit samtykke tilbage, hvis behandlingen bygger på samtykke.</p>
-  <p><b>Klage.</b> Er du uenig i vores behandling af dine oplysninger, kan du klage til <a href="https://www.datatilsynet.dk" target="_blank" rel="noopener">Datatilsynet</a>.</p>
- </details>
+ <details id="dp"><summary>Datapolitik</summary><div id="dpTekst"></div></details>
 </div></section>
 </main>
 
 <footer><div class="wrap">
- <div><img src="FOKUS_logo_tekst.png" alt="FOKUS" style="height:46px;width:auto;filter:brightness(0) invert(1);display:block;margin-bottom:.6rem"><br>foreningen for oplevelser, kultur, unge og samvær<br><a href="mailto:forening.fokus@gmail.com">forening.fokus@gmail.com</a></div>
+ <div><img src="FOKUS_logo_tekst.png" alt="FOKUS" style="height:46px;width:auto;filter:brightness(0) invert(1);display:block;margin-bottom:.6rem"><span id="fotTekst"></span><br><a class="mail" href="mailto:"></a></div>
  <div id="social"></div>
  <div><a href="#" id="vedtaegter2">Vedtægter</a><a href="#datapolitik" data-open>Datapolitik</a></div>
 </div></footer>
@@ -189,7 +173,14 @@ function parseDato(s){
   m = s.match(/^(\d{1,2})[\/.\-](\d{1,2})[\/.\-](\d{4})$/); if (m) return new Date(+m[3], m[2]-1, +m[1]);
   return null;
 }
-$('#memberCount').textContent = C.medlemmer || '';
+const T = C.tekster || {};
+const setT = (id, v) => { const el = $(id); if (el && v != null) el.textContent = v; };
+['heroTitel','heroTekst','omOverskrift','partnerOverskrift','eventOverskrift','kontaktTekst','fotTekst','noEvents','eventNote'].forEach(k => setT('#' + k, T[k === 'noEvents' ? 'ingenEvents' : k === 'fotTekst' ? 'sidefod' : k]));
+$('#stats').innerHTML = (T.noegletal || []).map(n => `<div><b>${esc(n.tal)}</b><span>${esc(n.tekst)}</span></div>`).join('');
+$('#omTekst').innerHTML = (T.om || []).map(t => `<p>${esc(t)}</p>`).join('');
+$('#partnerListe').innerHTML = (T.partnere || []).map(t => `<li>${esc(t)}</li>`).join('');
+document.querySelectorAll('a.mail').forEach(a => { a.href = 'mailto:' + C.mail; a.textContent = C.mail; });
+$('#dpTekst').innerHTML = (C.datapolitik || []).map(d => `<p><b>${esc(d.overskrift)}</b> ${esc(d.tekst).replace(/\{\{mail\}\}/g, esc(C.mail))}</p>`).join('');
 ['#vedtaegter','#vedtaegter2'].forEach(s => { $(s).href = C.vedtaegter || '#'; });
 $('#social').innerHTML = (C.sociale||[]).map(s => `<a href="${esc(s.url)}" rel="noopener" target="_blank">${esc(s.navn)}</a>`).join('');
 
@@ -199,8 +190,7 @@ $('#noEvents').hidden = upcoming.length > 0;
 $('#eventList').innerHTML = upcoming.map(e => {
   const mnd = e.d.toLocaleDateString('da-DK', {month:'short'}).replace('.','');
   const meta = esc(e.sted) + (e.tid ? ' · kl. ' + esc(e.tid) : '');
-  const knap = e.link ? `<a class="btn" href="${esc(e.link)}" target="_blank" rel="noopener">Køb billet</a>` : `<span class="soon">Billetter kommer snart</span>`;
-  return `<li class="event"><div class="date"><big>${e.d.getDate()}</big><small>${mnd}</small></div><div><h3>${esc(e.titel)}</h3><p>${meta}</p>${e.tekst?`<p>${esc(e.tekst)}</p>`:''}</div>${knap}</li>`;
+  return `<li class="event"><div class="date"><big>${e.d.getDate()}</big><small>${mnd}</small></div><div><h3>${esc(e.titel)}</h3><p>${meta}</p>${e.tekst?`<p>${esc(e.tekst)}</p>`:''}</div></li>`;
 }).join('');
 
 $('#boardList').innerHTML = (C.bestyrelse||[]).map(p =>
@@ -225,13 +215,20 @@ function handle(formId, type, okText) {
       const y = new Date().getFullYear(), f = +form.foedselsaar.value;
       if (f < y - 27 || f > y - 18) { fail('Medlemskab er for unge fra 18 til og med 27 år.'); return; }
     }
-    if (!C.formularUrl) { fail('Formularen er endnu ikke forbundet. Skriv til forening.fokus@gmail.com.'); return; }
+    const url = C.formularUrl;
+    if (!url) { fail('Formularen er endnu ikke forbundet. Skriv til ' + C.mail + '.'); return; }
     const data = new URLSearchParams(new FormData(form)); data.delete('website'); data.set('type', type);
     btn.disabled = true; msg.textContent = 'Sender …';
-    try {
-      await fetch(C.formularUrl, { method: 'POST', mode: 'no-cors', body: data });
-      form.reset(); msg.textContent = okText;
-    } catch (e) { fail('Noget gik galt. Prøv igen, eller skriv til forening.fokus@gmail.com.'); }
+    let svar = '';
+    try { const r = await fetch(url, { method: 'POST', body: data }); svar = (await r.text()).trim(); }
+    catch (e) {   // svaret kunne ikke læses. Send igen uden svar (systemet afviser dubletter på e-mail)
+      try { await fetch(url, { method: 'POST', mode: 'no-cors', body: data }); svar = 'ok'; } catch (e2) { svar = 'fejl'; }
+    }
+    if (svar === 'ok') { form.reset(); msg.textContent = okText; }
+    else if (svar === 'findes') { form.reset(); msg.textContent = 'Du er allerede medlem af FOKUS. Tak!'; }
+    else if (svar === 'alder') fail('Medlemskab er for unge fra 18 til og med 27 år.');
+    else if (svar === 'ugyldig') fail('Tjek, at alle felter er udfyldt korrekt.');
+    else fail('Noget gik galt. Prøv igen, eller skriv til ' + C.mail + '.');
     btn.disabled = false;
   });
 }
