@@ -11,8 +11,8 @@ window.CONFIG = {
   /* --- Links --- */
   vedtaegter: "vedtaegter.pdf",          // filen ligger i samme mappe
   sociale: [
-    { navn: "Instagram", url: "#" },     // erstat # med jeres adresse
-    { navn: "Facebook",  url: "#" },
+    { navn: "Instagram", url: "https://www.instagram.com/fokus.forening/" },     // erstat # med jeres adresse
+    { navn: "Facebook",  url: "https://www.facebook.com/profile.php?id=61594122722177" },
     { navn: "TikTok",    url: "#" }
   ],
 
@@ -22,11 +22,11 @@ window.CONFIG = {
   /* --- TEKSTER PÅ SIDEN --- */
   tekster: {
     heroTitel: "Kultur for alle unge",
-    heroTekst: "Et gratis medlemskab giver dig adgang til udvalgte arrangementer hos Danmarks kulturinstitutioner til en markant reduceret pris. Hver måned. Sammen med andre unge.",
+    heroTekst: "Hjælp med at gøre kultur billigere og bedre for unge mennesker! Et gratis medlemskab giver dig tilbud i indbakken til udvalgte arrangementer hos Danmarks bedste kulturinstitutioner til en markant reduceret pris. Hver måned",
 
     /* tallene i toppen – ret "tal" og "tekst". Fjern en linje for at fjerne et tal. */
     noegletal: [
-      { tal: "200+",  tekst: "medlemmer" },
+      { tal: "250+",  tekst: "medlemmer" },
       { tal: "1",     tekst: "event om måneden" },
       { tal: "0 kr.", tekst: "for at være med" }
     ],
@@ -35,10 +35,10 @@ window.CONFIG = {
     om: [   /* ét afsnit pr. linje */
       "FOKUS er en ungedrevet, frivillig forening, der giver unge den anledning, de ofte mangler for at opsøge kulturlivet. Mange unge finder det svært eller dyrt at gå til kultur uden en konkret anledning.",
       "Som medlem inviteres du hver måned til et udvalgt arrangement hos en etableret kulturinstitution. Vi vælger bevidst kun ét ad gangen, så kvaliteten er høj, og der opstår hype. I samarbejde med institutionerne arrangerer vi også oplæg, talks og møder med kunstnere før eller efter, så der bliver plads til fællesskab og nye samtaler.",
-      "FOKUS er startet og drives af fire unge mellem 19 og 22 år, der mødte hinanden på Grundtvigs Højskole. Vi tror på, at et stærkt demokrati kræver, at alle unge har reel adgang til de fællesskaber, der former os som samfund. FOKUS drives uden kommercielt sigte."
+      "FOKUS er non-profit og har har udelukkende til formål at skabe bedre rammer for unge i det danske kulturliv!"
     ],
     partnerOverskrift: "Vi samarbejder med",
-    partnere: ["Østre Gasværk", "Dansehallerne", "Cinemateket", "Aveny-T", "DR Koncerthus", "Urban13", "Folketeatret"],
+    partnere: ["Østre Gasværk", "Dansehallerne", "Cinemateket"],
 
     eventOverskrift: "Kommende events",
     eventNote: "Billetlinket til hvert event sendes på mail til medlemmerne, når eventet annonceres. Billetter kan ikke købes her på siden.",
@@ -63,10 +63,10 @@ window.CONFIG = {
 
   /* --- BESTYRELSE --- foto: "" eller filnavn, fx "anna.jpg" (upload billedet ved siden af denne fil) */
   bestyrelse: [
-    { navn: "Navn Navnesen", rolle: "Forperson",         foto: "" },
-    { navn: "Navn Navnesen", rolle: "Næstforperson",     foto: "" },
-    { navn: "Navn Navnesen", rolle: "Kasserer",          foto: "" },
-    { navn: "Navn Navnesen", rolle: "Bestyrelsesmedlem", foto: "" }
+    { navn: "Gustav Falgren", rolle: "Forperson",         foto: "" },
+    { navn: "Tristan Garde Abildgaard", rolle: "Næstforperson",     foto: "" },
+    { navn: "Karl Korfix Barlebo", rolle: "Kasserer",          foto: "" },
+    { navn: "Kasper Holte Nielsen", rolle: "Bestyrelsesmedlem", foto: "" }
   ],
 
   /* --- GALLERI (tidligere events) ---
