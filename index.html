@@ -77,6 +77,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between}
 footer a{margin-right:1.1rem}
 @media(max-width:800px){.hero .wrap,.about,.forms{grid-template-columns:1fr}.hero .logo{max-width:220px;grid-row:1;margin-top:1.5rem}.hero .wrap{min-height:0;padding-bottom:2.5rem}.event{grid-template-columns:70px 1fr}.event .btn{grid-column:1/-1;justify-self:start}nav{display:none}section{padding:3rem 0}}
 @media(prefers-reduced-motion:reduce){.hero .logo{animation:none}html{scroll-behavior:auto}}
+html{-webkit-text-size-adjust:100%}section{scroll-margin-top:70px}
+.menu{display:none;background:none;border:2px solid var(--navy);border-radius:12px;width:44px;height:44px;font-size:1.4rem;color:var(--navy);cursor:pointer}
+@media(max-width:800px){
+header .wrap{position:relative;flex-wrap:nowrap}header .btn{padding:.5rem 1rem;font-size:.9rem;margin-left:auto}.brand img{height:28px}.menu{display:block}
+nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:.4rem 1.25rem 1rem;border-bottom:1px solid var(--mist);box-shadow:0 10px 20px rgba(16,38,61,.1)}
+nav.open{display:flex}nav a{padding:.9rem 0;font-size:1.1rem;border-bottom:1px solid var(--mist)}
+.hero h1{font-size:clamp(2.6rem,13vw,4rem)}.stats{gap:1.4rem}.stats b{font-size:2rem}h2{font-size:2.1rem}
+.signup{padding:1.5rem;border-radius:28px 80px 28px 28px}.row{grid-template-columns:1fr}.btn{padding:.8rem 1.4rem}
+footer .wrap{flex-direction:column;gap:1.2rem}}
 </style>
 </head>
 <body>
@@ -84,6 +93,7 @@ footer a{margin-right:1.1rem}
  <a class="brand" href="#top"><img src="FOKUS_logo_tekst.png" alt="FOKUS"></a>
  <nav aria-label="Hovedmenu"><a href="#om">Om FOKUS</a><a href="#kalender">Kalender</a><a href="#bestyrelse">Bestyrelse</a><a href="#galleri">Galleri</a><a href="#kontakt">Kontakt</a></nav>
  <a class="btn" href="#tilmeld">Bliv medlem</a>
+ <button class="menu" type="button" aria-label="Menu" aria-expanded="false">☰</button>
 </div></header>
 
 <main id="top">
@@ -232,6 +242,9 @@ function handle(formId, type, okText) {
     btn.disabled = false;
   });
 }
+const mb = $('.menu'), nv = $('nav');
+mb.addEventListener('click', () => { const o = nv.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
+nv.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nv.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); }));
 handle('#signupForm', 'medlem', 'Velkommen i FOKUS! Du hører fra os snart.');
 handle('#contactForm', 'kontakt', 'Tak for din besked. Vi svarer hurtigst muligt.');
 </script>
