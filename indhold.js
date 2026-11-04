@@ -37,8 +37,7 @@ window.CONFIG = {
       "Med et medlemsskab i FOKUS får du helt automatisk ét nøje udvalgt kultur-tilbud om måneden direkte i indbakken. VI spænder bredt og har tilbud til en hver smag, men gerne til formål at udfordre vores medlemmer. Uanset om eventet var noget for dig eller ej, oplever du eventet med en stor gruppe andre unge, du kan dele dine tanker med.",
       "Vi udnytter at kulturinstitutioner savner unge mennesker, og at unge mennesker savner kultur. Man kan se det som en slags organiseret grupperabat - med ekstra fordele oven i købet.",
       "FOKUS er desuden 100% non-profit, og har udelukkende til formål at skabe bedre rammer for unge i det danske kulturliv!",
-   
-      "Hvis du vil være med til at give unge mennesker en chance i det københavnske kulturliv, så meld dig ind i dag - Fuldkommen gratis og uforpligtende.
+      "Hvis du vil være med til at give unge mennesker en chance i det københavnske kulturliv, så meld dig ind i dag - Fuldkommen gratis og uforpligtende",
     ],
     partnerOverskrift: "Vi samarbejder med",
     partnere: ["Østre Gasværk", "Dansehallerne", "Cinemateket"],
