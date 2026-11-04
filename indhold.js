@@ -13,7 +13,7 @@ window.CONFIG = {
   sociale: [
     { navn: "Instagram", url: "https://www.instagram.com/fokus.forening/" },     // erstat # med jeres adresse
     { navn: "Facebook",  url: "https://www.facebook.com/profile.php?id=61594122722177" },
-    { navn: "TikTok",    url: "#" }
+    { navn: "TikTok",    url: "https://www.tiktok.com/@fokusforening?_r=1&_t=ZG-9B4m3g7TmDo" }
   ],
 
   /* --- Adresse til medlemsregistret (fra Google Apps Script). Bruges af tilmelding og kontaktformular. --- */
@@ -22,7 +22,7 @@ window.CONFIG = {
   /* --- TEKSTER PÅ SIDEN --- */
   tekster: {
     heroTitel: "Kultur for alle unge",
-    heroTekst: "Hjælp med at gøre kultur billigere og bedre for unge mennesker! Et gratis medlemskab giver dig tilbud i indbakken til udvalgte arrangementer hos Danmarks bedste kulturinstitutioner til en markant reduceret pris. Hver måned",
+    heroTekst: "Hjælp med at gøre kultur billigere og bedre for unge mennesker! Et gratis medlemskab giver dig tilbud i indbakken til udvalgte arrangementer hos Danmarks bedste kulturinstitutioner - til en markant reduceret pris -Hver måned",
 
     /* tallene i toppen – ret "tal" og "tekst". Fjern en linje for at fjerne et tal. */
     noegletal: [
@@ -33,9 +33,12 @@ window.CONFIG = {
 
     omOverskrift: "Om FOKUS",
     om: [   /* ét afsnit pr. linje */
-      "FOKUS er en ungedrevet, frivillig forening, der giver unge den anledning, de ofte mangler for at opsøge kulturlivet. Mange unge finder det svært eller dyrt at gå til kultur uden en konkret anledning.",
-      "Som medlem inviteres du hver måned til et udvalgt arrangement hos en etableret kulturinstitution. Vi vælger bevidst kun ét ad gangen, så kvaliteten er høj, og der opstår hype. I samarbejde med institutionerne arrangerer vi også oplæg, talks og møder med kunstnere før eller efter, så der bliver plads til fællesskab og nye samtaler.",
-      "FOKUS er non-profit og har har udelukkende til formål at skabe bedre rammer for unge i det danske kulturliv!"
+      "FOKUS er en ungedrevet, frivillig forening, der savner et kulturliv i København, som er billigere, bedre og mere tilgængeligt for unge mennesker. For det skal ikke være SU-satsen eller kreativiteten hos den enkelte der skal bestemme om man har adgang til god kultur!",
+      "Med et medlemsskab i FOKUS får du helt automatisk ét nøje udvalgt kultur-tilbud om måneden direkte i indbakken. VI spænder bredt og har tilbud til en hver smag, men gerne til formål at udfordre vores medlemmer. Uanset om eventet var noget for dig eller ej, oplever du eventet med en stor gruppe andre unge, du kan dele dine tanker med.",
+      "Vi udnytter at kulturinstitutioner savner unge mennesker, og at unge mennesker savner kultur. Man kan se det som en slags organiseret grupperabat - med ekstra fordele oven i købet.",
+      "FOKUS er desuden 100% non-profit, og har udelukkende til formål at skabe bedre rammer for unge i det danske kulturliv!",
+   
+      "Hvis du vil være med til at give unge mennesker en chance i det københavnske kulturliv, så meld dig ind i dag - Fuldkommen gratis og uforpligtende.
     ],
     partnerOverskrift: "Vi samarbejder med",
     partnere: ["Østre Gasværk", "Dansehallerne", "Cinemateket"],
@@ -56,8 +59,8 @@ window.CONFIG = {
   ---------------------------------------------------------------------- */
   events: [
     { dato: "23/10/2026", tid: "", titel: "Olivia",                sted: "Østre Gasværk", tekst: "" },
-    { dato: "24/11/2026", tid: "", titel: "Vagabundus",            sted: "Dansehallerne", tekst: "" },
-    { dato: "13/12/2026", tid: "", titel: "It’s a Wonderful Life", sted: "Cinemateket",   tekst: "" },
+    { dato: "24/11/2026", tid: "", titel: "Vagabundus",            sted: "Dansehallerne", tekst: "Vagabundus er en kraftfuld og eksplosiv danseforestilling om krop, fællesskab og bevægelse. 13 performere fylder scenen med uafbrudt dans, sang og en helt særlig gruppeenergi, der tager publikum med storm." },
+    { dato: "13/12/2026", tid: "", titel: "Mission: Impossible 1", sted: "Cinemateket",   tekst: "En tidsløs klassiker! Filmen vil garanteret give en velfortjent pause fra julegaveræset og de sludfyldte decembergader" },
     { dato: "29/01/2027", tid: "", titel: "Embracing The Root",    sted: "Aveny-T",       tekst: "" }
   ],
 
