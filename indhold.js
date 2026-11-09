@@ -57,10 +57,10 @@ window.CONFIG = {
      dato: dag/måned/år, fx "23/10/2026" | tid: fx "19:30" eller "" | tekst: kort beskrivelse eller ""
   ---------------------------------------------------------------------- */
   events: [
-    { dato: "23/10/2026", tid: "", titel: "Olivia",                sted: "<i>Østre Gasværk<i>", tekst: "" },
-    { dato: "24/11/2026", tid: "", titel: "Vagabundus",            sted: "<i>Dansehallerne<i>", tekst: "Vagabundus er en kraftfuld og eksplosiv danseforestilling om krop, fællesskab og bevægelse. 13 performere fylder scenen med uafbrudt dans, sang og en helt særlig gruppeenergi, der tager publikum med storm." },
-    { dato: "13/12/2026", tid: "", titel: "Mission: Impossible 1", sted: "<i>Cinemateket<i>",   tekst: "En tidsløs klassiker! Filmen vil garanteret give en velfortjent pause fra julegaveræset og de sludfyldte decembergader" },
-    { dato: "29/01/2027", tid: "", titel: "Embracing The Root",    sted: "<i>Aveny-T<i>",       tekst: "" }
+    { dato: "23/10/2026", tid: "", titel: "Olivia",                sted: "Østre Gasværk", tekst: "" },
+    { dato: "24/11/2026", tid: "", titel: "Vagabundus",            sted: "Dansehallerne", tekst: "Vagabundus er en kraftfuld og eksplosiv danseforestilling om krop, fællesskab og bevægelse. 13 performere fylder scenen med uafbrudt dans, sang og en helt særlig gruppeenergi, der tager publikum med storm." },
+    { dato: "13/12/2026", tid: "", titel: "Mission: Impossible 1", sted: "Cinemateket",   tekst: "En tidsløs klassiker! Filmen vil garanteret give en velfortjent pause fra julegaveræset og de sludfyldte decembergader" },
+    { dato: "29/01/2027", tid: "", titel: "Embracing The Root",    sted: "Aveny-T",       tekst: "" }
   ],
 
   /* --- BESTYRELSE --- foto: "" eller filnavn, fx "anna.jpg" (upload billedet ved siden af denne fil) */
