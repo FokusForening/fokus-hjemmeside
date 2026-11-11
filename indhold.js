@@ -75,6 +75,11 @@ window.CONFIG = {
      Upload billederne ved siden af denne fil, og tilføj en linje pr. billede:
      { billede: "olivia1.jpg", tekst: "Olivia, Østre Gasværk" },  */
   galleri: [
+     { billede: "Olivia1.jpg", tekst: "Olivia, Østre Gasværk" },
+       { billede: "Olivia2.jpg", tekst: "Olivia, Østre Gasværk" },
+       { billede: "Olivia3.jpg", tekst: "Olivia, Østre Gasværk" },
+       { billede: "Olivia4.jpg", tekst: "Olivia, Østre Gasværk" },
+       { billede: "Olivia5.jpg", tekst: "Olivia, Østre Gasværk" },
   ],
 
   /* --- DATAPOLITIK --- {{mail}} bliver erstattet af kontaktmailen ovenfor */
