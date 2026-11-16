@@ -40,7 +40,7 @@ window.CONFIG = {
       "Hvis du vil være med til at give unge mennesker en chance i det københavnske kulturliv, så meld dig ind i dag - Fuldkommen gratis og uforpligtende",
     ],
     partnerOverskrift: "Vi samarbejder med",
-    partnere: ["Østre Gasværk", "Dansehallerne", "Cinemateket"],
+    partnere: ["Østre Gasværk", "Dansehallerne", "Cinemateket", "Aveny-T", "Mange flere..."],
 
     eventOverskrift: "Kommende events",
     eventNote: "Billetlinket til hvert event sendes på mail til medlemmerne, når eventet annonceres. Billetter kan ikke købes her på siden.",
