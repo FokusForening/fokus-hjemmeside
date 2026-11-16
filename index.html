@@ -86,6 +86,7 @@ nav.open{display:flex}nav a{padding:.9rem 0;font-size:1.1rem;border-bottom:1px s
 .hero h1{font-size:clamp(2.6rem,13vw,4rem)}.stats{gap:1.4rem}.stats b{font-size:2rem}h2{font-size:2.1rem}
 .signup{padding:1.5rem;border-radius:28px 80px 28px 28px}.row{grid-template-columns:1fr}.btn{padding:.8rem 1.4rem}
 footer .wrap{flex-direction:column;gap:1.2rem}}
+.event .sted{display:flex;align-items:center;gap:.4rem;font-weight:600;font-size:1.2rem;color:var(--navy);margin:.25rem 0 0}.event .tid{font-weight:600;margin:.1rem 0 0}
 </style>
 </head>
 <body>
@@ -199,8 +200,7 @@ const upcoming = (C.events||[]).map(e => ({...e, d: parseDato(e.dato)})).filter(
 $('#noEvents').hidden = upcoming.length > 0;
 $('#eventList').innerHTML = upcoming.map(e => {
   const mnd = e.d.toLocaleDateString('da-DK', {month:'short'}).replace('.','');
-  const meta = esc(e.sted) + (e.tid ? ' · kl. ' + esc(e.tid) : '');
-  return `<li class="event"><div class="date"><big>${e.d.getDate()}</big><small>${mnd}</small></div><div><h3>${esc(e.titel)}</h3><p>${meta}</p>${e.tekst?`<p>${esc(e.tekst)}</p>`:''}</div></li>`;
+  return `<li class="event"><div class="date"><big>${e.d.getDate()}</big><small>${mnd}</small></div><div><h3>${esc(e.titel)}</h3><p class="sted"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>${esc(e.sted)}</p>${e.tid?`<p class="tid">kl. ${esc(e.tid)}</p>`:''}${e.tekst?`<p>${esc(e.tekst)}</p>`:''}</div></li>`;
 }).join('');
 
 $('#boardList').innerHTML = (C.bestyrelse||[]).map(p =>
